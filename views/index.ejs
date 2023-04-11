@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/app.css">
+</head>
+<body>
+
+  <style>
+    body{
+      background-image: url("images/tangku.jpg") ; 
+      
+      
+    }
+
+    .header{
+      width: 100%;
+      background-color: rgba(0, 0, 0, .2);
+    }
+
+    .header ul{
+      text-align: center;
+      
+    }
+
+    .header ul li{
+      list-style: none;
+      display: inline-block;
+      
+    }
+
+    .header ul li{
+      text-decoration: none;
+      color: black;
+      letter-spacing: 2px;
+      font-size: 15px;
+      font-weight: 600;
+      
+    }
+    
+
+  </style>
+
+        <!--Navbar-->    
+        <nav class="header fixed-top">
+          <ul>
+            <li><a href="#hero" class="btn background-color: transparent; border: none;" style="color: beige;">Home</a></li>
+            <li><a href="#sejarah" class="btn background-color: transparent; border: none;" style="color: beige;">About</a></li>
+            <li><a href="#Author" class="btn background-color: transparent; border: none;" style="color: beige;">Author</a></li>
+          </ul>
+        </nav>
+    
+          <!--Hero-->
+          
+            <section id="hero" >
+              <div class="container">
+                  <div class="row"><div class="col-lg-12" >
+                    <h2 class="display-3 fw-bold mt-5 text-center mb-3" style="color: beige;">TANGKUBAN PERAHU</h2>
+                    <p class="lead text-light fw-semibold" style="text-align: justify;">Gunung ini memiliki tiga kawah yang terkenal. Memandang kawah gunung dan menikmati suasana di sekitarnya mampu menarik banyak pengunjung, khususnya pada hari libur. Gunung Tangkuban Perahu atau juga sering disebut Tangkuban Parahu merupakan salah satu gunung terbesar di dataran Parahyangan. Taman Wisata Alam Gunung Tangkuban Perahu berada di utara kota Lembang, sebelah utara kota Bandung.</p>
+                    <a href="#ticket" class="btn btn-dark btn-rounded my-3">Harga Tiket</a>    
+                  </div>
+              </div>
+              </section>
+              
+              <section id="event">
+                <div class="container my-3 py-5">
+                  <p class="display-3 fw-bold mt-5 text-center mb-3 " style="color: beige;">DESTINASI</p>
+                  <div class="row">
+                  <% events.forEach((event)=> { %>
+              <div class="col-lg-4 mt-4">
+                <div class="card bg-white shadow border-0">
+                  <div class="card-body" style="height: 500px;">
+                    <a href="#" class="btn btn-primary mb-3" >
+                      <%= event.name %>
+                    </a>
+                    <br>
+                      <img src="<%= event.sc_gambar %>" alt="" width="326px" height="200px" class="mb-2"> 
+                      <p style="text-align: justify;"> <%= event.penjelasan %> </p>                  
+                  </div>
+                </div>
+                
+                
+              </div>
+              <% }); %>
+                  </div>
+                </div>
+              </div>
+              
+            </section>
+          </div>
+          <section id="ticket">
+            <div class="container my-5 py-5">
+              <p class="display-3 fw-bold mt-5" style="color: beige;">Harga Tiket</p>
+              <div class="card mb-3" style="max-width: 540px;">
+                <div class="row g-0">
+                  <div class="col-md-4">
+                    <img src="images/ratu1.jpg" class="img-fluid rounded-start" alt="">
+                  </div>
+                  <div class="col-md-8">
+                    <div class="card-body">
+                      <h5 class="card-title">Kawah Ratu</h5>
+                      <p class="card-text">Tiket Masuk:	Rp 15.000<br> Setiap hari:	08:00 - 17:00 WIB</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="card mb-3" style="max-width: 540px;">
+                <div class="row g-0">
+                  <div class="col-md-4">
+                    <img src="images/upas.jpg" class="img-fluid rounded-start" alt="" style="width: 300px; height: 130px;">
+                  </div>
+                  <div class="col-md-8">
+                    <div class="card-body">
+                      <h5 class="card-title">Kawah Ratu</h5>
+                      <p class="card-text">Tiket Masuk:	Rp 20.000<br> Setiap hari:	08:30 - 16:00 WIB</p>
+                    </div>
+                  </div>
+                </div>
+            </div>
+            <div class="card mb-3" style="max-width: 540px;">
+              <div class="row g-0">
+                <div class="col-md-4">
+                  <img src="images/domas.jpg" class="img-fluid rounded-start" alt="" style="width: 300px; height: 130px;">
+                </div>
+                <div class="col-md-8">
+                  <div class="card-body">
+                    <h5 class="card-title">Kawah Ratu</h5>
+                    <p class="card-text">Tiket Masuk:	Rp 25.000<br> Setiap hari:	09:30 - 17:00 WIB</p>
+                  </div>
+                </div>
+              </div>
+          </div>
+          </section>
+
+          <section id="sejarah" >
+            <div class="container" >
+                <div class="row"><div class="col-lg-12" >
+                  <h2 class="display-3 fw-bold mt-5 mb-3" style="color: beige;">SEJARAH TANGKUBAN PERAHU</h2>
+                  <div class="col-lg-4 mt-4"></div>
+                  <div class="card bg-white shadow border-0">
+                    <div class="card-body" style="height: 410px;">
+                  <p class="lead fw-semibold" style="text-align: justify;">Sejarah Tangkuban Perahu dimulai jauh sebelum ia menjadi tujuan wisata populer seperti sekarang.
+
+                    Menurut mitologi Sunda, Tangkuban Perahu dulu adalah sebuah perahu besar yang ditenggelamkan oleh sang dewi. Kemudian, perahu tersebut menjadi gunung yang berapi. Legenda ini dipercayai oleh masyarakat Sunda hingga saat ini.
+                    
+                    Dalam sejarah modern, letusan terbesar dari Tangkuban Perahu terjadi pada tahun 1826, yang melahirkan kawah Ratu dan Upas. Letusan ini menyebabkan banyak penduduk setempat meninggal dunia dan kebakaran hutan yang meluas. Setelah itu, Tangkuban Perahu terus mengalami letusan-letusan kecil hingga awal abad ke-20.
+                    
+                    Pada masa penjajahan Belanda, Tangkuban Perahu dijadikan objek penelitian oleh para ilmuwan Eropa. Penelitian ini meliputi pengukuran suhu, kelembaban, dan tekanan di sekitar kawah serta analisis mineral dan gas yang dikeluarkan dari gunung tersebut.
+                    
+                    Setelah kemerdekaan Indonesia, Tangkuban Perahu mulai dikenal sebagai tujuan wisata alam yang menarik. Pada tahun 1980-an, pemerintah Indonesia membangun fasilitas untuk mendukung pariwisata di sekitar gunung ini, seperti jalan raya, restoran, dan tempat parkir.
+                    
+                    Saat ini, Tangkuban Perahu telah menjadi salah satu tujuan wisata yang terkenal di Jawa Barat. Kawahnya yang indah dan pemandangan pegunungan membuat banyak wisatawan datang ke tempat ini untuk menikmati alam yang masih asli.</p>   
+                </div>
+            </div>
+          </div>
+          <section id="Author" >
+            <footer>
+              <p>Hak Cipta &copy; 2023 Wisata.bdg <br> Author Website ini:</p>
+              <ul>
+                <li><a href="#">2110631170122 Pradana wahyu Hidayanto <br> </a></li>
+                <li><a href="#">2110631170140  Reymen Maulana</a></li>
+              </ul>
+            </footer>
+            </section>
+            </section>
+            
+            
+        <script src="modules/bootstrap/dist/js/bootstrap.min.js"></script>
+    </body>
+    </html>
